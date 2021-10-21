@@ -24,8 +24,12 @@ function go(src) {
 
 function handleDefault() {
     fetch('/juniorclass.csv')
+        .then()
         .then((out) => {
-            go(out);
+            out.text().then(function (text) {
+                console.log(text);
+                go(text);
+            });
         })
         .catch(err => {
             throw err
