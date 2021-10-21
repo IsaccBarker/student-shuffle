@@ -24,7 +24,6 @@ function go(src) {
 
 function handleDefault() {
     fetch('/juniorclass.csv')
-        .then(res => res.json())
         .then((out) => {
             go(out);
         })
