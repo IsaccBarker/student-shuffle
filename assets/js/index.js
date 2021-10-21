@@ -23,7 +23,7 @@ function go(src) {
 }
 
 function handleDefault() {
-    fetch('/juniorclass.csv')
+    fetch('./juniorclass.csv')
         .then()
         .then((out) => {
             out.text().then(function (text) {
